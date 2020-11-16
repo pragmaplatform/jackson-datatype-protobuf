@@ -64,7 +64,7 @@ public abstract class ProtobufSerializer<T extends MessageOrBuilder> extends Std
         generator.writeNumber((Integer) value);
         break;
       case LONG:
-        generator.writeNumber((Long) value);
+        generator.writeString(((Long) value).toString());
         break;
       case FLOAT:
         generator.writeNumber((Float) value);
